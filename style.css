@@ -1,88 +1,51 @@
- <style>
-    body {
-       font-family: Arial, sans-serif;
-       background: linear-gradient(to right, #f7f7f7, #e1e1e1); 
-       margin: 0;
-       padding: 0;
-       display: flex;
-       justify-content: center;
-       align-items: center;
-       height: 100vh;
-       box-sizing: border-box;
-     }
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UNIVERSITY ADMISSION APPLICATION</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to external CSS -->
+</head>
+<body>
+<div class="form-container">
+    <h2>UNIVERSITY ADMISSION APPLICATION </h2>
 
-   
-   .form-container {
-       background-color: #ffffff;
-       padding: 40px;
-       border-radius: 8px;
-       box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-       width: 450px; 
-       box-sizing: border-box;
-       max-width: 100%;
-      }
+    <form id="admissionForm" onsubmit="return validateForm()">
 
-   
-   h2 {
-      text-align: center;
-      color: #333;
-      font-size: 28px; 
-      margin-bottom: 20px;
-     }
+        <!-- Personal Information -->
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name" required>
+        <div class="error" id="nameError"></div>
 
-  
-label {
-    font-size: 14px;
-    color: #555;
-    margin-bottom: 5px;
-    display: block;
-   }
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob" required>
+        <div class="error" id="dobError"></div>
 
-   input[type="text"], input[type="email"], input[type="date"], input[type="number"], select {
-      width: 100%;
-      padding: 12px; 
-      margin: 10px 0 20px 0; 
-      border: 1px solid #ddd;
-      border-radius: 4px;
-      font-size: 14px;
-     }
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" required>
+        <div class="error" id="emailError"></div>
 
- 
- input[type="submit"] {
-     width: 100%;
-     padding: 12px;
-     background-color: #4CAF50;
-     color: white;
-     font-size: 16px;
-     border: none;
-     border-radius: 4px;
-     cursor: pointer;
-     transition: background-color 0.3s ease;
-    }
+        <label for="phone">Phone Number:</label>
+        <input type="number" id="phone" name="phone" required>
+        <div class="error" id="phoneError"></div>
 
-  input[type="submit"]:hover {
-       background-color: #45a049;
-      }
+        <!-- Program Information -->
+        <label for="program">Program of Interest:</label>
+        <select id="program" name="program" required>
+            <option value="">Select Program</option>
+            <option value="Computer Science">Computer Science</option>
+            <option value="Business Administration">Business Administration</option>
+            <option value="Mechanical Engineering">Mechanical Engineering</option>
+            <option value="Electrical Engineering">Electrical Engineering</option>
+        </select>
+        <div class="error" id="programError"></div>
 
-  
-  .error {
-      color: red;
-      font-size: 12px;
-     }
+        <!-- Submit Button -->
+        <input type="submit" value="Submit Application">
 
-    
-    @media (max-width: 768px) {
-    .form-container {
-         width: 85%; 
-       }
-     }
+    </form>
+</div>
 
-   @media (max-width: 400px) {
-   .form-container {
-         width: 95%; 
-       }
-     }
-
- 
-
-</style>
+<script src="script.js"></script> <!-- Link to external JavaScript -->
+</body>
+</html>
