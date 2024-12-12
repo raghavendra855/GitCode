@@ -1,1 +1,88 @@
-add css file
+ <style>
+    body {
+       font-family: Arial, sans-serif;
+       background: linear-gradient(to right, #f7f7f7, #e1e1e1); 
+       margin: 0;
+       padding: 0;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       height: 100vh;
+       box-sizing: border-box;
+     }
+
+   
+   .form-container {
+       background-color: #ffffff;
+       padding: 40px;
+       border-radius: 8px;
+       box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+       width: 450px; 
+       box-sizing: border-box;
+       max-width: 100%;
+      }
+
+   
+   h2 {
+      text-align: center;
+      color: #333;
+      font-size: 28px; 
+      margin-bottom: 20px;
+     }
+
+  
+label {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 5px;
+    display: block;
+   }
+
+   input[type="text"], input[type="email"], input[type="date"], input[type="number"], select {
+      width: 100%;
+      padding: 12px; 
+      margin: 10px 0 20px 0; 
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      font-size: 14px;
+     }
+
+ 
+ input[type="submit"] {
+     width: 100%;
+     padding: 12px;
+     background-color: #4CAF50;
+     color: white;
+     font-size: 16px;
+     border: none;
+     border-radius: 4px;
+     cursor: pointer;
+     transition: background-color 0.3s ease;
+    }
+
+  input[type="submit"]:hover {
+       background-color: #45a049;
+      }
+
+  
+  .error {
+      color: red;
+      font-size: 12px;
+     }
+
+    
+    @media (max-width: 768px) {
+    .form-container {
+         width: 85%; 
+       }
+     }
+
+   @media (max-width: 400px) {
+   .form-container {
+         width: 95%; 
+       }
+     }
+
+ 
+
+</style>
